@@ -23,13 +23,13 @@
             android:layout_height="120dp"
             android:contentDescription="Logo"
             android:src="@drawable/ic_settings_logo"
-            app:tint="@color/blanco_puro" />
+             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="SupportFlow"
+            android:text="FIXME"
             android:textColor="@color/blanco_puro"
             android:textSize="36sp"
             android:textStyle="bold|italic" />
@@ -115,7 +115,7 @@
             android:layout_width="220dp"
             android:layout_height="60dp"
             android:layout_marginTop="30dp"
-            android:backgroundTint="@color/azul_boton_oscuro"
+            android:backgroundTint="@color/fondo_oscuro"
             android:text="CREAR CUENTA"
             android:textColor="@color/blanco_puro"
             android:textSize="18sp"
@@ -132,7 +132,7 @@
             android:layout_marginTop="18dp"
             android:gravity="center"
             android:text="Te enviaremos un correo para verificar tu cuenta."
-            android:textColor="@color/azul_boton_oscuro"
+            android:textColor="@color/fondo_oscuro"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -144,7 +144,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:text="¿Ya tienes cuenta? Inicia sesión"
-            android:textColor="@color/blanco_puro"
+            android:textColor="@color/negro_icono"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

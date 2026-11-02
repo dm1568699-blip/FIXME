@@ -114,16 +114,19 @@ public class CrearTicketActivity extends AppCompatActivity {
         btnTomarFoto = findViewById(R.id.btn_tomar_foto);
         ivPreview = findViewById(R.id.iv_preview);
 
+        // ANTES: android.R.layout.simple_spinner_item (hereda el color de texto
+        // del tema oscuro de la app y se ve casi ilegible sobre el spinner blanco).
+        // Ahora usamos un layout propio con textColor oscuro forzado.
         ArrayAdapter<CharSequence> adapterCat = ArrayAdapter.createFromResource(
-                this, R.array.ticket_categories, android.R.layout.simple_spinner_item
+                this, R.array.ticket_categories, R.layout.spinner_item_oscuro
         );
-        adapterCat.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapterCat.setDropDownViewResource(R.layout.spinner_item_oscuro);
         spCategory.setAdapter(adapterCat);
 
         ArrayAdapter<CharSequence> adapterPri = ArrayAdapter.createFromResource(
-                this, R.array.ticket_priorities, android.R.layout.simple_spinner_item
+                this, R.array.ticket_priorities, R.layout.spinner_item_oscuro
         );
-        adapterPri.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapterPri.setDropDownViewResource(R.layout.spinner_item_oscuro);
         spPriority.setAdapter(adapterPri);
 
         findViewById(R.id.btnBack).setOnClickListener(v -> finish());

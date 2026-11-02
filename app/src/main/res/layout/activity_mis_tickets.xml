@@ -5,11 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#1A1A2E">
+    android:background="#F5F5F5">
 
+    <!-- Barra superior: aqui SI va el verde -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
+        android:background="@color/verde_claro"
         android:paddingHorizontal="12dp">
 
         <ImageButton
@@ -43,6 +45,7 @@
             app:tint="#FFFFFF"/>
     </RelativeLayout>
 
+    <!-- Panel de filtros (sin cambios) -->
     <LinearLayout
         android:id="@+id/layoutFiltrosUser"
         android:layout_width="match_parent"
@@ -50,6 +53,7 @@
         android:orientation="vertical"
         android:paddingHorizontal="12dp"
         android:paddingBottom="8dp"
+        android:background="@color/verde_claro"
         android:visibility="gone">
 
         <TextView
@@ -133,15 +137,82 @@
         </LinearLayout>
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvTickets"
+    <!--
+        FrameLayout envolviendo la lista + estado vacio + FAB.
+        Esto es lo que permite que el FAB flote sobre el contenido
+        en vez de ir "en fila" con el boton de salir.
+    -->
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:paddingHorizontal="12dp"
-        android:paddingTop="8dp"
-        android:clipToPadding="false"/>
+        android:layout_weight="1">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTickets"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="88dp"
+            android:clipToPadding="false"/>
+
+        <!--
+            Estado vacio. Visible por default; tu adapter/Activity
+            lo oculta (GONE) en cuanto rvTickets.getAdapter().getItemCount() > 0,
+            y lo vuelve a mostrar si la lista queda en 0.
+        -->
+        <LinearLayout
+            android:id="@+id/layoutVacio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="32dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@android:drawable/ic_menu_agenda"
+                app:tint="@color/verde_claro"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Aún no tienes tickets"
+                android:textColor="#212121"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="Cuando reportes un problema, aparecerá aquí para que le podamos dar seguimiento."
+                android:textColor="#757575"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabCrear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:text="Nuevo ticket"
+            android:textAllCaps="false"
+            android:contentDescription="Crear ticket"
+            app:icon="@android:drawable/ic_input_add"
+            app:iconTint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="@color/verde_claro" />
+
+    </FrameLayout>
+
+    <!-- Fila inferior: solo "Salir", ya sin pelear con el FAB -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -155,26 +226,18 @@
             android:layout_width="wrap_content"
             android:layout_height="44dp"
             android:text="Salir"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#C62828"/>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabCrear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:contentDescription="Crear"
-            app:backgroundTint="#3F45B5"
-            app:srcCompat="@android:drawable/ic_input_add"
-            app:tint="#FFFFFF"/>
+            android:textAllCaps="false"
+            android:textColor="#C62828"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SupportFlow"
+        android:text="FIXME"
         android:textColor="#AAAAAA"
         android:textSize="12sp"
         android:gravity="center"
         android:paddingVertical="8dp"/>
+
 </LinearLayout>

@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A0E27"> <RelativeLayout
+    android:background="@color/fondo_oscuro"> <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="64dp"
     android:paddingHorizontal="16dp"
-    android:background="#0A0E27">
+    android:background="#275220">
 
     <ImageButton
         android:id="@+id/btnBack"
@@ -72,6 +72,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Título del Ticket"
+                        android:textColorHint="#757575"
                         app:boxStrokeColor="#3F45B5"
                         app:hintTextColor="#3F45B5"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -89,6 +90,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:hint="Descripción detallada"
+                        android:textColorHint="#757575"
                         app:boxStrokeColor="#3F45B5"
                         app:hintTextColor="#3F45B5"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -123,6 +125,7 @@
                         android:paddingHorizontal="12dp">
 
                         <Spinner
+                            android:popupBackground="@android:color/white"
                             android:id="@+id/spCategory"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -156,6 +159,7 @@
                         android:paddingHorizontal="12dp">
 
                         <Spinner
+                            android:popupBackground="@android:color/white"
                             android:id="@+id/spPriority"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -257,7 +261,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SupportFlow © 2024"
+        android:text="FIXME © 2026"
         android:textColor="#66AAAAAA"
         android:textSize="11sp"
         android:gravity="center"

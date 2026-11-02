@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="fondo_oscuro">#2C3563</color>
+    <color name="fondo_oscuro">#136F08</color>
 
     <color name="fondo_tarjeta_claro">#E0E0E0</color>
 
-    <color name="azul_boton_oscuro">#222A5B</color>
+    <color name="azul_boton_oscuro">@color/ic_launcher_background</color>
 
     <color name="blanco_puro">#FFFFFF</color>
 
+    <color name="verde_claro">#009209</color>
+
     <color name="gris_icono">#757575</color>
+
+    <color name="negro_icono">#0D0D0D</color>
 </resources>

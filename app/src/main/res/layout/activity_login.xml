@@ -23,13 +23,13 @@
             android:layout_height="120dp"
             android:src="@drawable/ic_settings_logo"
             android:contentDescription="Logo"
-            app:tint="@color/blanco_puro" />
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="SupportFlow"
+            android:text="FIXME"
             android:textColor="@color/blanco_puro"
             android:textSize="36sp"
             android:textStyle="bold|italic" />
@@ -64,6 +64,8 @@
             android:drawablePadding="15dp"
             android:elevation="4dp"
             android:hint="Email"
+            android:textColorHint="#757575"
+            android:textColor="#212121"
             android:paddingStart="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -79,6 +81,8 @@
             android:drawablePadding="15dp"
             android:elevation="4dp"
             android:hint="Contraseña"
+            android:textColorHint="#757575"
+            android:textColor="#212121"
             android:inputType="textPassword"
             android:paddingStart="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +94,7 @@
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:layout_marginTop="35dp"
-            android:backgroundTint="@color/azul_boton_oscuro"
+            android:backgroundTint="@color/fondo_oscuro"
             android:text="LOG IN"
             android:textColor="@color/blanco_puro"
             android:textSize="18sp"
@@ -106,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="¿Olvidaste tu contraseña?"
-            android:textColor="@color/azul_boton_oscuro"
+            android:textColor="@color/fondo_oscuro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
@@ -117,7 +121,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="¿No tienes cuenta? Regístrate"
-            android:textColor="@color/blanco_puro"
+            android:textColor="@color/negro_icono"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

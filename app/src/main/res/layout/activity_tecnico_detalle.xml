@@ -230,7 +230,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SupportFlow"
+        android:text="FIXME"
         android:textColor="#444466"
         android:textSize="12sp"
         android:gravity="center"

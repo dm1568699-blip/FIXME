@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#1A237E"
+        android:background="#2C4520"
         android:paddingHorizontal="12dp"
         android:elevation="6dp">
 
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:background="#1A1A2E">
+            android:background="@color/fondo_oscuro">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -66,7 +66,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Título del ticket"
-                        android:textColor="#1A237E"
+                        android:textColor="@color/ic_launcher_background"
                         android:textSize="20sp"
                         android:textStyle="bold"/>
 
@@ -188,7 +188,7 @@
                         android:layout_height="48dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="14dp"
-                        android:backgroundTint="#1A237E"
+                        android:backgroundTint="@color/fondo_oscuro"
                         android:text="ENVIAR"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"/>
@@ -202,7 +202,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SupportFlow"
+        android:text="FIXME"
         android:textColor="#AAAAAA"
         android:textSize="12sp"
         android:gravity="center"

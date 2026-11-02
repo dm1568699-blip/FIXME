@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.ListenerRegistration;
@@ -40,6 +40,9 @@ public class MisTicketsActivity extends AppCompatActivity {
     private Spinner spFilterAsignacionUser;
     private Spinner spFilterStatusUser;
 
+    private RecyclerView rvTickets;
+    private LinearLayout layoutVacio;
+
     private String filtroAsignacion = "Todos";
     private String filtroStatus = "Todos";
 
@@ -58,8 +61,10 @@ public class MisTicketsActivity extends AppCompatActivity {
 
         String uid = user.getUid();
 
-        RecyclerView rv = findViewById(R.id.rvTickets);
-        rv.setLayoutManager(new LinearLayoutManager(this));
+        rvTickets = findViewById(R.id.rvTickets);
+        rvTickets.setLayoutManager(new LinearLayoutManager(this));
+
+        layoutVacio = findViewById(R.id.layoutVacio);
 
         adapter = new TicketAdapter(ticket -> {
             Intent i = new Intent(this, DetalleTicketActivity.class);
@@ -67,7 +72,7 @@ public class MisTicketsActivity extends AppCompatActivity {
             startActivity(i);
         });
 
-        rv.setAdapter(adapter);
+        rvTickets.setAdapter(adapter);
 
         layoutFiltrosUser = findViewById(R.id.layoutFiltrosUser);
         spFilterAsignacionUser = findViewById(R.id.spFilterAsignacionUser);
@@ -75,7 +80,10 @@ public class MisTicketsActivity extends AppCompatActivity {
 
         configurarFiltros();
 
-        FloatingActionButton fab = findViewById(R.id.fabCrear);
+        // ANTES: FloatingActionButton fab = findViewById(R.id.fabCrear);
+        // El XML usa ExtendedFloatingActionButton, que NO hereda de FloatingActionButton.
+        // Con el tipo viejo, esta línea tronaba con ClassCastException al abrir la pantalla.
+        ExtendedFloatingActionButton fab = findViewById(R.id.fabCrear);
         fab.setOnClickListener(v -> startActivity(new Intent(this, CrearTicketActivity.class)));
 
         ticketsListener = repo.escucharTicketsPorUsuario(uid, new TicketRepository.TicketsCallback() {
@@ -198,6 +206,10 @@ public class MisTicketsActivity extends AppCompatActivity {
         }
 
         adapter.submit(filtrados);
+
+        boolean vacio = filtrados.isEmpty();
+        layoutVacio.setVisibility(vacio ? View.VISIBLE : View.GONE);
+        rvTickets.setVisibility(vacio ? View.GONE : View.VISIBLE);
     }
 
     @Override
