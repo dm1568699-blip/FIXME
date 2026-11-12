@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#1A1A2E">
+    android:background="#009209">
 
     <!-- Toolbar -->
     <RelativeLayout
@@ -151,9 +151,9 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#E53935"
+        android:backgroundTint="#F8F2F2"
         android:text="Cerrar Sesión"
-        android:textColor="#FFFFFF"
+        android:textColor="#0D0D0D"
         android:textStyle="bold"
         app:cornerRadius="25dp"/>
 

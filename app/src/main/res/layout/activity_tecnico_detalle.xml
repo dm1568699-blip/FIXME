@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0F1123">
+    android:background="#009209">
 
     <!-- Toolbar -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="#1A237E"
+        android:background="#136F08"
         android:paddingHorizontal="12dp"
         android:elevation="8dp">
 
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="4dp"
-                app:cardBackgroundColor="#1A1F3C"
+                app:cardBackgroundColor="#F7F8FB"
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
@@ -80,7 +80,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Título del Ticket"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#0D0D0D"
                         android:textSize="20sp"
                         android:textStyle="bold"/>
 
@@ -88,14 +88,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginVertical="12dp"
-                        android:background="#2C2F5B"/>
+                        android:background="#056810"/>
 
                     <TextView
                         android:id="@+id/tvDesc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Descripción..."
-                        android:textColor="#90CAF9"
+                        android:textColor="#106405"
                         android:textSize="15sp"
                         android:lineSpacingExtra="4dp"/>
 
@@ -105,7 +105,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Creado por: -"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#0D0D0D"
                         android:textSize="14sp"
                         android:textStyle="bold"/>
 
@@ -129,7 +129,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="4dp"
-                app:cardBackgroundColor="#1A1F3C"
+                app:cardBackgroundColor="#F9FAFD"
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
@@ -142,7 +142,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Estado del Ticket"
-                        android:textColor="#90CAF9"
+                        android:textColor="#054705"
                         android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="10dp"/>
@@ -162,7 +162,7 @@
                         android:text="MARCAR COMO RESUELTO"
                         android:textStyle="bold"
                         android:textColor="#FFFFFF"
-                        android:backgroundTint="#2E7D32"
+                        android:backgroundTint="#7D312E"
                         app:cornerRadius="25dp"/>
 
                 </LinearLayout>
@@ -174,7 +174,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="4dp"
-                app:cardBackgroundColor="#1A1F3C">
+                app:cardBackgroundColor="#F4F4F8">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -186,7 +186,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Historial de Comentarios"
-                        android:textColor="#90CAF9"
+                        android:textColor="#121212"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="12dp"/>

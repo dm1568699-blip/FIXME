@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0F1123">
+    android:background="#F4F4F4">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="#1A237E"
+        android:background="#009209"
         android:paddingHorizontal="12dp"
         android:elevation="8dp">
 
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gestión de Roles"
-                android:textColor="#90CAF9"
+                android:textColor="#D7E2FF"
                 android:textSize="12sp"/>
         </LinearLayout>
     </RelativeLayout>
@@ -61,9 +61,9 @@
         android:layout_height="44dp"
         android:layout_gravity="center"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#E53935"
+        android:backgroundTint="#F23838"
         android:text="Cerrar Sesión"
-        android:textColor="#FFFFFF"
+        android:textColor="#F6F3F3"
         android:textStyle="bold"
         app:cornerRadius="22dp"/>
 
