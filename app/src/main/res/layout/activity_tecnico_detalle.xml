@@ -195,7 +195,7 @@
                         android:id="@+id/rvComments"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:nestedScrollingEnabled="false"/>
+                        android:nestedScrollingEnabled="false" />
 
                     <EditText
                         android:id="@+id/etComment"
@@ -207,8 +207,8 @@
                         android:hint="Añadir nota técnica..."
                         android:minLines="3"
                         android:padding="12dp"
-                        android:textColor="#050505FF"
-                        android:textColorHint="#666666"/>
+                        android:textColor="#111111"
+                        android:textColorHint="#070707"/>
 
                     <Button
                         android:id="@+id/btnSendComment"
